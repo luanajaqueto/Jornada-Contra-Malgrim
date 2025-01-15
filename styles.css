@@ -1,0 +1,184 @@
+/*CSS3 (Cascading Style Sheets) é responsável pela aparência visual de uma 
+página (o estilo). Com o CSS3, é possível definir cores, fontes, tamanhos, 
+espaçamentos e até animações, tornando o design mais atraente e que estiliza 
+a estrutura criada pelo HTML. O CSS3 permite criar layouts mais modernos e 
+visualmente interessantes, melhorando a experiência do usuário. Se o HTML
+se preocupa com o conteúdo, o CSS se preocupa com o visual.*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* O código é iniciado retirando algumas formatações 
+que são padrões do navegador e que poderiam atrapalhar o 
+desenvolvimento*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*
+    Lembrete:
+    id deve ser representado por "#"
+    class deve ser representado por "." 
+
+*/
+
+#game {
+    position: relative;
+    /* Definir o position como relative indica que a posição do elemento
+    será alterada de acordo com sua posição inicial, além de dizer que o 
+    elemento com essa característica não irá influenciar a posição dos
+    outros elementos da página, como acontece com o position: absolute*/
+
+    width: 100%;
+    height: 100%;
+
+    /* width e height especificam a largura e altura respectivamente*/
+
+    background-image: linear-gradient(to bottom, #C68FE6, #6FDCE3);
+    /* background-image funciona de maneira semelhante ao background-color, 
+    porém é um pouco autodescritivo suas diferenças, sendo que o primeiro
+    define o fundo como uma imagem e o segundo como uma cor. Entretanto, se
+    o objetivo for criar um fundo gradiente, como é o nosso caso
+    é utilizado o background-image*/ 
+
+    border: 2px solid #000;
+    /* border nesse caso está definindo a espessura, o estilo e a cor da
+    borda do seletor game*/
+
+    overflow: hidden;
+    /* overflow indica o que acontece com um elemento quando ele sai da área
+    a que ele pertence. Nesse caso foi dito que o elemento que for para
+    fora da área deve ser ficar oculto (hidden)*/
+}
+
+/* A seguir foram determinados as características dos corações, do item
+e das moedas respectivamente
+
+top, right, bottom e left determinam a posição de acordo com as direções,
+sendo:
+top = em cima
+right = direita
+left = esquerda
+bottom = em baixo
+*/
+
+#hearts {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#item {
+    position: absolute;
+    background-image: url("sprites/boots_sprite.gif");
+    /* background-imagem possui a função de colocar o fundo de um elemento 
+    como uma imagem, o que já foi dito anteriormente, mas aqui está sendo
+    feita uma conexão de do seletor a imagem desejada, indicando a pasta que 
+    ela está armazenada (sprites) e seu nome (boots_sprite.gif)
+    Essa ligação será feita com frequência no restante do CSS, pois
+    é a maneira como as imagens foram inseridas no jogo*/
+
+    width: 32px;
+    height: 32px;
+}
+
+.coin {
+    position: absolute;
+    background-image: url("sprites/coin_sprite.gif");
+    width: 32px;
+    height: 32px;
+    /* Observe que aqui está sendo alterado a class, ou seja, há
+    dois itens referentes a coin, e ambos estão sendo definidos 
+    ao mesmo tempo*/
+}
+
+#player {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    bottom: 0;
+    left: 50px;
+}
+
+/* runright, runleft, jump e idle se referem as animações de movimento
+do personagem controlado pelo jogador. Elas são adicionadas no CSS, mas 
+acontecem de forma efetiva através do JavaScript, onde elas são programadas
+para acontecerem no tempo certo */
+
+.runright {
+    background-image: url('sprites/sprites_player/runright.gif');
+}
+
+.runleft {
+    background-image: url('sprites/sprites_player/runleft.gif');
+}
+
+.jump {
+    background-image: url('sprites/sprites_player/jump.gif');
+}
+
+.idle{
+    background-image: url('sprites/sprites_player/idle.gif');
+}
+
+#enemy {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    bottom: 205px; 
+    left: 170px; 
+    background-image: url('sprites/enemy_sprite.gif');
+}
+
+/* Definimos a classe plataform com as características que todas deveriam
+receber e depois foi definido as características individuais desejadas
+para cada uma delas, através de seu id*/
+
+.platform {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-image: url("sprites/plataformground_sprite.png");
+}
+
+div#um {
+    width: 200px;
+    height: 20px;
+}
+
+div#dois {
+    width: 350px;
+    height: 25px;
+}
+
+div#tres {
+    width: 500px;
+    height: 20px;
+}
+
+div#quatro {
+    width: 300px;
+    height: 20px;
+}
+
+div#cinco {
+    width: 400px;
+    height: 25px;
+}
+
+div#seis {
+    width: 300px;
+    height: 25px;
+}
+
+div#sete {
+    width: 150px;
+    height: 25px;
+}

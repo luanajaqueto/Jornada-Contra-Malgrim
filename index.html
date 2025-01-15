@@ -1,0 +1,73 @@
+<!-- HTML5 (HyperText Markup Language) é a estrutura básica de uma página da web. Ele organiza e 
+define a estrutura de conteúdos como textos, imagens, vídeos e botões, permitindo que tudo seja 
+exibido na tela. Pense nele como o que dá forma e organiza todos os elementos sendo eles visíveis
+ou não para o usuário final, pois muitas vezes sua função é comunicar ao navegador qual é a função
+de determinado elemento em uma página. Logo, o HTML é responsável por dar forma e 
+conteúdo à página.-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada Contra Malgrim</title>
+    <link rel="stylesheet" href="styles.css">
+        <!-- A tag link possui muitas funções, nesse caso foi usada apenas para
+         fazer a conexão de maneira externa do HTML com o CSS, através do "href" 
+         que mostra o caminho até o arquivo desejado-->
+</head>
+<body>
+    
+    <!-- Cada uma das divs criadas e explicadas a seguir representa uma área que será 
+     reservada a algum componente inserido durante o processo de criação do jogo. Essas divs 
+     não apresentam alterações visuais da página, ela apenas será modificada quando 
+     for introduzido elementos no CSS -->
+
+    <div id="game">
+        <!-- Criando uma divisão com o nome "game" que se refere à área em que o jogo 
+     acontece. Tudo é programado para acontecer dentro dela -->
+
+        <div id="player"></div>
+            <!-- A div "player" se refere ao personagem que será controlado pelo 
+             jogador-->
+
+        <div id="hearts">
+            <!-- A div "hearts" representa os corações que são a vida do jogador-->
+            <span class="heart">❤️</span>
+        </div>
+
+        <!-- Cada uma das divs a seguir representam uma plataforma dentro do jogo. Foram 
+         colocadas dentro da class plataform, para facilitar as modificações de elementos
+         que desejamos que todas elas compatilhem. O style diz onde a plataforma deve
+         ser posicionada na página. -->
+
+        <div id="um" class="platform" style="left: 0px; top: 120px;"></div>
+        <div id="dois" class="platform" style="left: 400px; top: 191px;"></div>
+        <div id="tres" class="platform" style="left: 130px; top: 430px;"></div>
+        <div id="quatro" class="platform" style="left: 1070px; top: 135px;"></div> 
+        <div id="cinco" class="platform" style="left: 750px; top: 350px;"></div>
+        <div id="seis" class="platform" style="left: 990px; top: 550px;"></div>
+        <div id="sete" class="platform" style="left: 0px; top: 150px;"></div>
+
+        <div id="enemy"></div>
+            <!--A div "enemy" se refere ao inimigo do jogo -->
+
+        <div id="item"  style ="left: 1040px; top: 600px;"></div>
+            <!--A div "item" se refere ao item que permite o jogador pular mais alto, 
+            que é representado por um par de botas -->
+
+        <div id="coin1" class="coin" style ="left: 1200px; top: 140px;"></div>
+        <div id="coin2" class="coin" style="left: 40px; top: 220px;"></div>
+            <!-- Ambas as divs referenciam as moedas do jogo, e novamente o style
+             tem o objetivo de definir a posição delas dentro do jogo-->
+        
+     
+    </div>
+
+    <script src="script.js"></script>
+        <!-- A tag script serve para fazer a conexão de maneira externa do HTML com
+         o JavaScript-->
+    
+</body>
+</html>
